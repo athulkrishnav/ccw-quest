@@ -2,7 +2,7 @@ const express=require('express');
 const connect=require("./configs/db.js")
 const bodyParser = require("body-parser");
 const logger = require("morgan")
-const Port = process.env.PORT || 3755
+const Port = process.env.PORT || 3000
 var cors = require('cors')
 const app=express();
 app.use(express.json());

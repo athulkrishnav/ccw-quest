@@ -13,6 +13,7 @@ import { Quizes } from "./Components/QuizNew/Quizes.jsx";
 import { Navbarnew } from "./Components/Navbar/Navbarnew.jsx";
 import { Resultshow } from "./Pages/Resultshow.jsx";
 import { ShowAllAnswers } from "./Pages/ShowAllAnswers.jsx";
+import Results from "./Pages/Results.jsx";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/addquiz" element={<QuizForm />} />
         <Route path="/profile" element={<ProfileMain />} />
         <Route path="/result" element={<Resultshow />} />
+        <Route path="/results" element={<Results />} />
         <Route path="/showallanswer" element={<ShowAllAnswers />} />
       </Routes>
       <Footer />
