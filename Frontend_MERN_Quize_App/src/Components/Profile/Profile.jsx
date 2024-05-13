@@ -7,6 +7,8 @@ export const Profile = () => {
   const data = useSelector((state) => state.mernQuize.QuizData);
   const [count, setCount] = useState(0);
   const userName = useSelector((state) => state.mernQuize.userName);
+  const userId = useSelector((state) => state.mernQuize.userId);
+  console.log("userId ",userId);
 
   return (
     <div className="margin-auto shadow-2xl h-96 w-11/12 ml-16 ">
@@ -22,12 +24,20 @@ export const Profile = () => {
           {" "}
           Welcome! {userName}👋
         </h1>
+        <div className="">
+        <div className="border-red-500 relative  bg-teal-300 rounded-2xl right-24 top-44 border-2 mb-8 p-1 pl-2  pr-2 ">
+          <Link to="/">
+            <button className="text-xl font-bold rounded-md">Attempt Quiz</button>
+          </Link>
+        </div>
+        <div className="border-red-500 relative  bg-teal-300 rounded-2xl right-24 top-44 border-2 mb-8 p-1 pl-2  pr-2 ">
+          <Link to="/results">
+            <button className="text-xl font-bold rounded-md">Previous results</button>
+          </Link>
+        </div>
       </div>
-      <div className="border-red-500 absolute  bg-teal-300 rounded-2xl right-24 top-44 border-2 mb-8 p-1 pl-2  pr-2 ">
-        <Link to="/">
-          <button className="text-xl font-bold rounded-md">Attempt Quiz</button>
-        </Link>
       </div>
+
     </div>
   );
 };

@@ -1,5 +1,9 @@
 const mongoose = require('mongoose')
 const resultSchema = new mongoose.Schema({
+    userId:{
+        type:mongoose.Types.ObjectId,
+        ref:"User"
+    },
     resultUser: [String],
     questionArr: [
         {
@@ -9,4 +13,4 @@ const resultSchema = new mongoose.Schema({
     ],
 })
 
-module.exports = resultSchema
+module.exports = mongoose.model('Result', resultSchema)
